@@ -20,7 +20,7 @@ class App extends Component {
 
   async joinRoom() {
   try {
-    const response = await fetch(`https://7jgn065r89.execute-api.ap-southeast-1.amazonaws.com/default/VideoWithTwilio?identity=${this.state.identity}`);
+    const response = await fetch(`https://ei58g5h6fh.execute-api.ap-southeast-1.amazonaws.com/dev?identity=${this.state.identity}`);
     const data = await response.json();
     const room = await connect(data.accessToken, {
       name: 'cool-room',
